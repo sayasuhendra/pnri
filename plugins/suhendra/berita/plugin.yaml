@@ -1,0 +1,13 @@
+plugin:
+    name: 'suhendra.berita::lang.plugin.name'
+    description: 'suhendra.berita::lang.plugin.description'
+    author: Suhendra
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    buat-berita:
+        label: 'Buat Berita'
+        url: suhendra/berita/beritas
+        icon: icon-newspaper-o
+        permissions:
+            - 'Buat Berita'

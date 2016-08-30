@@ -1,0 +1,23 @@
+<div class="ui main text container">
+    <div class="center aligned ui grid">
+      <img class="ui image" src="{{ 'assets/images/logopng.png'|theme }}" alt="Logo PNRI">
+      <h1 class="ui header">PUSAT PRESERVASI BAHAN PUSTAKA</h1>
+    </div>
+</div>
+
+
+
+<div class="ui stackable main menu">
+  <div class="ui text container">
+    <a class="item {{ viewBag.activeMenu == 'home' ? 'active' }}" href="/"><img class="logo" src="{{ 'assets/images/pnri.png'|theme }}">HOME</a>
+    <a class="item {{ viewBag.activeMenu == 'profil' ? 'active' }}" href="/profil">PROFIL</a>
+    <a class="item {{ viewBag.activeMenu == 'berita' ? 'active' }}" href="/berita">BERITA</a>
+    <a class="item {{ viewBag.activeMenu == 'pelayanan' ? 'active' }}" href="/pelayanan">PELAYANAN PUBLIK</a>
+    <a class="item {{ viewBag.activeMenu == 'ebook' ? 'active' }}" href="/ebook">EBOOK</a>
+    <a class="item {{ viewBag.activeMenu == 'kontak' ? 'active' }}" href="/kontak">KONTAK</a>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="ui hidden divider"></div>

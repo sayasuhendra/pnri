@@ -1,0 +1,4 @@
+/storage/framework/cache/
+/storage/framework/sessions/
+/vendor/
+.phpintel

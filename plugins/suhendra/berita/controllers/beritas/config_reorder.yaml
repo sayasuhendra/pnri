@@ -1,0 +1,4 @@
+title: Beritas
+modelClass: Suhendra\Berita\Models\Berita
+toolbar:
+    buttons: reorder_toolbar

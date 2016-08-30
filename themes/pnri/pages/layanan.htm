@@ -1,0 +1,124 @@
+title = "Pelayanan Publik" 
+url = "/pelayanan" 
+layout = "default" 
+description = "Pelayanan Publik Preservasi Perpustakaan Nasinal Republik Indonesia" 
+is_hidden = 0 
+
+
+[viewBag]
+activeMenu = 'pelayanan'
+==
+<?php
+
+
+public function onSend()
+{
+    // Collect input
+    $name = post('nama');
+    $email = post('email');
+
+    // Submit form
+    $to = ['suhendrakaf@yahoo.co.id', 'sayasuhendra@gmail.com'];
+    $params = compact('name','email');
+    Mail::sendTo($to, 'frontend::mail.notif', $params);
+    if (count(Mail::failures()) > 0) return false;
+    return true;
+}
+
+?>
+==
+
+
+<form id="form" class="ui form" data-request="onSend" data-request-success="" data-request-confirm="">
+    <h4 class="ui dividing header">Data Pemohon</h4>
+    <div class="two fields">
+        <div class="field">
+	        <label>Nama Lengkap</label>
+            <input type="text" name="nama" placeholder="Nama Lengkap">
+        </div>
+        <div class="field">
+	        <label>Nama Organisasi</label>
+            <input type="text" name="organisasi" placeholder="Nama Organisasi">
+        </div>
+    </div>
+    <div class="two fields">
+        <div class="field">
+	        <label>Nomer Telepon</label>
+            <input type="text" name="telepon" placeholder="Nomer Telepon">
+        </div>
+        <div class="field">
+	        <label>Alamat Email</label>
+            <input type="text" name="email" placeholder="Alamat Email">
+        </div>
+    </div>
+    <div class="field">
+        <label>Alamat</label>
+        <div class="fields">
+            <div class="twelve wide field">
+                <input type="text" name="alamat" placeholder="Alamat">
+            </div>
+            <div class="four wide field">
+                <input type="text" name="pos" placeholder="Kode Pos">
+            </div>
+        </div>
+    </div>
+    <div class="two fields">
+        <div class="field">
+            <label>Kecamatan</label>
+            <select class="ui fluid dropdown">
+	            <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Kota/Kabupaten</label>
+            <select class="ui fluid dropdown">
+	            <option value="">Pilih Kota/Kabupaten</option>
+            </select>
+        </div>
+    </div>
+
+    <h4 class="ui horizontal divider header">Pilih Layanan Publik</h4>
+    <div class="grouped fields">
+        
+    	<div class="two fields">
+	        <div class="field">
+	          <div class="ui radio checkbox">
+	            <input type="radio" name="layanan" checked="" tabindex="0" class="hidden">
+	            <label>Permintaan Pelestarian Naskah di Daerah Anda</label>
+	          </div>
+	        </div>
+	        <div class="field">
+	          <div class="ui radio checkbox">
+	            <input type="radio" name="layanan" tabindex="0" class="hidden">
+	            <label>Kunjungan Mengenal Pusat Preservasi Perpusnas RI</label>
+	          </div>
+	        </div>
+        </div>
+    	<div class="two fields">
+	        <div class="field">
+	          <div class="ui radio checkbox">
+	            <input type="radio" name="layanan" tabindex="0" class="hidden">
+	            <label>Workshop Penanganan Menghadapi Bencana 2016</label>
+	          </div>
+	        </div>
+	        <div class="field">
+	          <div class="ui radio checkbox">
+	            <input type="radio" name="layanan" tabindex="0" class="hidden">
+	            <label>Workshop Pedoman Pelestarian Bahan Pustaka 2016</label>
+	          </div>
+	        </div>
+      </div>
+  </div>
+    <br>
+                <!-- <button type="submit" class="btn btn btn-primary">Calculate</button> -->
+    <button class="ui primary button right floated" type="submit">Kirim Permohonan</button>
+</form>
+
+
+
+{% put scripts %}
+    <script> 
+        $('.ui.radio.checkbox').checkbox();
+    </script>
+{% endput %}
+

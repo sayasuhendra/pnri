@@ -1,0 +1,20 @@
+columns:
+    judul:
+        label: Judul
+        type: text
+        searchable: true
+        sortable: true
+    isi:
+        label: Isi
+        type: text
+        searchable: true
+        sortable: true
+    keyword:
+        label: Keyword
+        type: text
+        searchable: true
+        sortable: true
+    gambar:
+        label: Gambar
+        type: text
+    

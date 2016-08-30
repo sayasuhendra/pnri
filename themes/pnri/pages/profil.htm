@@ -1,0 +1,64 @@
+title = "Profil Pusat Preservasi Perpusnas RI"
+url = "/profil"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+activeMenu = 'profil'
+==
+
+<!-- HEADER -->
+{% partial "header" %}
+
+<div class="ui grid padded"></div>
+<div class="ui stackable two column grid">
+    <div class="column">
+        <div class="ui embed" data-source="youtube" data-id="Tp6ERq0RjII" data-placeholder="{{ 'assets/images/profil-video.png'|theme }}">
+        </div>
+    </div>
+    <div class="column">
+        <h4 class="header">Profil Pusat Preservasi Bahan Pustaka Perpusnas RI</h4>
+        <p>Pusat Preservasi Bahan Pustaka mempunyai tugas melaksanakan pelestarian informasi dan fisik bahan pustaka.</p>
+        <ul>
+            <li>Pelaksanaan pelestarian fisik melalui pemeliharaan, perawatan, restorasi dan penjilidan bahan pustaka</li>
+            <li>Pelaksanaan pelestarian kandungan informasi bahan pustaka melalui alih media mikrografi. </li>
+            <li>Pelaksanaan pelestarian kandungan informasi bahan pustaka melalui alih media digital ke media baru.</li>
+        </ul>
+        <h5>Kontak Kami</h5>
+        <div class="ui stackable two column grid">
+            <div class="column">
+                Jalan Salemba Raya No. 28 A
+                <br> DKI Jakarta 10430
+                <br> Free Call 0800-1-737787
+            </div>
+            <div class="column">
+                <a href="https://www.facebook.com/ayokeperpusnas"><i class="icon facebook"></i> Facebook <br></a>
+                <a href="https://twitter.com/perpusnas1"><i class="icon twitter"></i> Twitter <br></a>
+                <a href="http://www.youtube.com/user/Katinksg/videos"><i class="icon youtube"></i> Youtube <br></a>
+            </div>
+        </div>
+        <!-- <div class="ui horizontal divider">Kontak</div> -->
+        <!--             <div class="ui search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Cari Ebook...">
+            <i class="search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div> -->
+    </div>
+</div>
+<div class="ui horizontal section divider">Silahkan Pilih Pelayanan Publik Kami</div>
+<div class="ui stackable center aligned grid">
+    <a href="/pelayanan" class="violet four wide column">Permintaan Pelestarian Naskah di Daerah Anda</a>
+    <a href="/pelayanan" class="blue four wide column">Kunjungan Mengenal Pusat Preservasi Perpusnas RI</a>
+    <a href="/pelayanan" class="teal four wide column">Workshop Penanganan Menghadapi Bencana 2016</a>
+    <a href="/pelayanan" class="green four wide column">Workshop Pedoman Pelestarian Bahan Pustaka 2016</a>
+</div>
+
+
+{% put scripts %}
+  <script type="text/javascript">
+    $('.ui.embed').embed();
+  </script>
+{% endput %}
+

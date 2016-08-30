@@ -1,0 +1,11 @@
+name: Beritas
+modelClass: Suhendra\Berita\Models\Berita
+form: $/suhendra/berita/models/berita/fields.yaml
+defaultRedirect: suhendra/berita/beritas
+create:
+    redirect: 'suhendra/berita/beritas/update/:id'
+    redirectClose: suhendra/berita/beritas
+update:
+    redirect: suhendra/berita/beritas
+    redirectClose: suhendra/berita/beritas
+preview: {  }

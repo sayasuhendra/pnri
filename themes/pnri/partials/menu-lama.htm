@@ -1,0 +1,52 @@
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+  <a class="item" href="/">Home</a>
+  <a class="item" href="/profil">Profil</a>
+  <a class="item" href="/berita">Berita</a>
+  <a class="item" href="/pelayanan">Pelayanan Publik</a>
+  <a class="item" href="/ebook">Ebook</a>
+  <a class="item" href="/kontak">Kontak</a>
+<!--     <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <a class="item" href="/">Home</a>
+    <a class="item" href="/profil">Profil</a>
+    <a class="item" href="/berita">Berita</a>
+    <a class="item" href="/pelayanan">Pelayanan Publik</a>
+    <a class="item" href="/ebook">Ebook</a>
+    <a class="item" href="/kontak">Kontak</a>
+</div>
+
+<div class="flexbox pusher">
+    <div class="ui vertical masthead segment">
+        <div class="ui container">
+            <div class="ui large secondary pointing menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a class="item {{ viewBag.activeMenu == 'home' ? 'active' }}" href="/">Home</a>
+                <a class="item {{ viewBag.activeMenu == 'profil' ? 'active' }}" href="/profil">Profil</a>
+                <a class="item {{ viewBag.activeMenu == 'berita' ? 'active' }}" href="/berita">Berita</a>
+                <a class="item {{ viewBag.activeMenu == 'pelayanan' ? 'active' }}" href="/pelayanan">Pelayanan Publik</a>
+                <a class="item {{ viewBag.activeMenu == 'ebook' ? 'active' }}" href="/ebook">Ebook</a>
+                <a class="item {{ viewBag.activeMenu == 'kontak' ? 'active' }}" href="/kontak">Kontak</a>
+                <div class="right item">
+                    <h3 class="item kanan">PUSAT PRESERVASI <br> <br> PERPUSTAKAAN NASIONAL RI</h3>
+                    <img class="ui image" src="{{ 'assets/images/pnri.png'|theme }}" alt="Logo PNRI">
+                    <!--             <a href="/login" class="ui button">Log in</a>
+            <a class="ui button">Sign Up</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="ui section inverted divider"></div>

@@ -1,0 +1,41 @@
+fields:
+    judul:
+        label: Judul
+        oc.commentPosition: ''
+        span: left
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: right
+        preset:
+            field: judul
+            type: slug
+        type: text
+    gambar:
+        label: 'Upload/Pilih Gambar'
+        span: auto
+        oc.commentPosition: ''
+        mode: image
+        type: mediafinder
+    isi:
+        label: 'Isi Berita'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    SEO:
+        label: 'SEO Konten'
+        span: full
+        type: section
+        comment: 'Tidak harus diisi'
+    keyword:
+        label: Keyword
+        span: full
+        type: text
+        comment: 'kata kunci pisahkan dengan koma ,'
+    deskripsi:
+        label: Deskripsi
+        oc.commentPosition: ''
+        span: full
+        type: text
